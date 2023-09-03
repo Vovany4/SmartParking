@@ -1,0 +1,29 @@
+﻿@model List<SmartParking.Models.Sensor>
+
+<h1>Sensors</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Id</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sensor in Model)
+        {
+            <tr>
+                <td>@sensor.Id</td>
+                <td>@sensor.Name</td>
+                <td>@sensor.Description</td>
+                <td>@sensor.Type</td>
+                <td>@sensor.Id</td>
+                <td><a href="Sensor/Edit/@sensor.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
